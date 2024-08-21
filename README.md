@@ -59,15 +59,15 @@ O arquivo da coleção está localizado na pasta `postman` do projeto.
 
 ## Requisições Disponíveis
 
-GET /clientes/ - Lista de todos os clientes.
-POST /clientes/ - Adiciona um novo cliente.
-DEL /clientes/{id}/ - Exclui um cliente pelo ID.
-POST /auth/token/ - Autentica o usuário e gera um token.
-GET /produtos/ - Lista de produtos disponíveis.
-POST /clientes/favoritos/ - Adiciona um produto aos favoritos do cliente.
-GET /clientes/favoritos/ - Lista produtos favoritos do cliente.
-DEL /clientes/favoritos/{produto_id}/ - Remove um produto dos favoritos do cliente.
-PUT /clientes/{id}/ - Atualiza as informações de um cliente.
+- GET /clientes/ - Lista de todos os clientes.
+- POST /clientes/ - Adiciona um novo cliente.
+- DEL /clientes/{id}/ - Exclui um cliente pelo ID.
+- POST /auth/token/ - Autentica o usuário e gera um token.
+- GET /produtos/ - Lista de produtos disponíveis.
+- POST /clientes/favoritos/ - Adiciona um produto aos favoritos do cliente.
+- GET /clientes/favoritos/ - Lista produtos favoritos do cliente.
+- DEL /clientes/favoritos/{produto_id}/ - Remove um produto dos favoritos do cliente.
+- PUT /clientes/{id}/ - Atualiza as informações de um cliente.
 
 ## Testes
 
