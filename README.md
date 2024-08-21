@@ -17,28 +17,28 @@ Este projeto é uma API REST desenvolvida em Django para gerenciar clientes e se
 ## Instalação
 
 1. Clone este repositório:
-   ```bash
+   `
    git clone https://github.com/SEU_USUARIO/LuizaLabs.git
 
 2. Navegue até o diretório do projeto:
-   ``bash
+   
    cd clientes-favoritos-api
 
 3. Crie e ative um ambiente virtual
-   ``bash
+   
    python -m venv venv
    source venv/bin/activate  # No Windows: venv\Scripts\activate
 
 4. Instale as dependências:
-   ``bash
+   
    pip install -r requirements.txt
 
 5. Aplique as migraçÕes:
-   ``bash
+   
    python manage.py migrate
 
 6. Execute o servidor:
-   ``bash
+   
    python manage.py runserver
 
 ## Uso
