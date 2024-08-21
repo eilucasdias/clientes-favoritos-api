@@ -45,12 +45,19 @@ Este projeto é uma API REST desenvolvida em Django para gerenciar clientes e se
 
 Você pode testar a API usando Postman. Importe a coleção de requisições incluída no projeto:
 
-Importe a Coleção do Postman:
+## Coleção do Postman
 
-Abra o Postman.
-Vá até "Importar" e selecione o arquivo JSON localizado na pasta postman.
+Você pode importar as requisições no Postman a partir do arquivo JSON incluído no projeto.
 
-Requisições Disponíveis:
+1. Abra o Postman.
+2. Vá para a seção de **Coleções** no lado esquerdo.
+3. Clique em **Importar** no canto superior esquerdo.
+4. Selecione o arquivo `clientes-favoritos-api-postman.json` da pasta `postman` do projeto.
+5. Clique em **Importar** para adicionar as requisições à sua coleção no Postman.
+
+O arquivo da coleção está localizado na pasta `postman` do projeto.
+
+## Requisições Disponíveis
 
 GET /clientes/ - Lista de todos os clientes.
 POST /clientes/ - Adiciona um novo cliente.

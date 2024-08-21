@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "562267d3-ce4f-4a33-a1ff-8eaea2cbeefd",
+		"name": "clientes-favoritos-api-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35302198"
+	},
+	"item": [
+		{
+			"name": "- Lista de todos os clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Adicionar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Teste novo cliente\",\r\n    \"email\": \"novo@cliente.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Autenticar usuário (GERAR TOKEN)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "lucas",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Lista de produtos disponíveis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MTk4OTc5LCJpYXQiOjE3MjQxOTg2NzksImp0aSI6IjEwNjMzY2YzOTc4ZDQ3MzJhNjI1ZjYxYWM4NDIyOTNhIiwidXNlcl9pZCI6MX0.JSK6YIsOHtUem0rehmMprju9mWZRtscoc42qsEVK1RI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/produtos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"produtos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Adicionar produtos aos favoritos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MTk5MDY3LCJpYXQiOjE3MjQxOTg3NjcsImp0aSI6IjVmYTgwN2UwODU1YzQ0ZmZhYTA3YzQwNDVjNDdmNTQyIiwidXNlcl9pZCI6MX0.WrmpEminJwOugG-borMwupOpiZaM5MfyyhjddENaMFY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"produto_id\": \"69e2f68f-20cc-b9c0-8365-89928a2dcf88\",\r\n  \"title\": \"Película Protetora para iPhone 6 Plus\",\r\n  \"brand\": \"elg\",\r\n  \"price\": 39.9,\r\n  \"image\": \"http://challenge-api.luizalabs.com/images/69e2f68f-20cc-b9c0-8365-89928a2dcf88.jpg\",\r\n  \"reviewScore\": 4.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/favoritos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						"favoritos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Listar produtos favoritos do cliente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MjAwNDEwLCJpYXQiOjE3MjQyMDAxMTAsImp0aSI6ImI4NDY2OWVjMWQ2YTQ5Y2ViNTM1OWIxOWEzMjE0NDgzIiwidXNlcl9pZCI6MX0.H6OFC7s2ey01oPlYxfOCeQYhRSmXGkgYUFDstFO2j1A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/favoritos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						"favoritos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Remover produtos dos favoritos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MTk2OTEwLCJpYXQiOjE3MjQxOTY2MTAsImp0aSI6IjE3ZGEyNjE4NjFjNjRmYmM4OTY2MGNlYjBjODU5MDFlIiwidXNlcl9pZCI6MX0.6T6cVaUVvpIzje_0sPBni2-hR4kCK6UKb5KUUEwXMqQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/favoritos/69e2f68f-20cc-b9c0-8365-89928a2dcf88/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						"favoritos",
+						"69e2f68f-20cc-b9c0-8365-89928a2dcf88",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "- Atualizar informação do cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Lucas Dias Luiz\",\r\n    \"email\": \"lucasdiasluiz@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clientes/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clientes",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
