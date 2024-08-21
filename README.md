@@ -72,5 +72,4 @@ PUT /clientes/{id}/ - Atualiza as informações de um cliente.
 ## Testes
 
 Para executar os testes, execute:
-   ``bash
    python manage.py test
